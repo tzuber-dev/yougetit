@@ -42,9 +42,9 @@ Benchmarking is provided with Catch2. You can write benchmarking assertions alon
 
 Welcome to the Gradebook program! Beginning with the instructions, we have 3 features you can use which are: 
 
-- Add a new student to the class
-- Add a new assignment to the class
-- Give a student a grade for an assignment
+- Add a new student to the class (first name, last name, student ID)
+- Add a new assignment to the class (name of assignment, total points possible)
+- Give a student a grade for an assignment (the grade can be between zero and the total points possible).
 
 In order to use the first feature (add a new student to class), look at the main menu of the program and select
 option 1. Upon doing that, enter in the required fields. After a successful addition to the classroom, you should see the "Success! Your student is now in this class."  message.
