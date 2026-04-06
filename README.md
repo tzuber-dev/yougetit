@@ -54,3 +54,5 @@ In order to use the second feature (add a new assignment to the class), please t
 Please note, to see the full report please select the option 4 which is to get the report. 
 
 In order to use the third feature (give a student a grade for an assignment), please enter the number 3 in the user menu. Again, please fill out the fields with your correct information. To enter a grade, you must had submitted a new student and a assignment before using this option. After successfully grading the assignment, you should get "Process finished with exit code -1073741795 (0xC000001D)" message. 
+
+In order to generate a report, please be sure to select the option 4 in the user menu. 
