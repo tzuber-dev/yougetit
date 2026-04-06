@@ -7,7 +7,7 @@
 #include <string>
 
 
-TEST_CASE("Works successfully with three students in a class") {
+TEST_CASE("Works good with three students in a class") {
 
      Gradebook gradebook;
      gradebook.addstudent("Bob"," ""Bobberson","ABC123");
@@ -17,17 +17,16 @@ TEST_CASE("Works successfully with three students in a class") {
 
 };
 
-
-
-
-TEST_CASE("Assignment position does not change") {
+TEST_CASE("Works good with two students and a single assignment") {
      Gradebook gradebook;
-     gradebook.addstudent("Michael"," ""Jackson","ABC123");
-     gradebook.addassignment("First homework", *"100");
-     gradebook.addassignment("Unit Test", *"100");
-     gradebook.addassignment("Second homework", *"100");
-     gradebook.addassignment("Third homework", *"100");
+     gradebook.addstudent("Bob"," ""Bobberson","ABC123");
+     gradebook.addstudent("Sam","Sammerson","DEF456");
+     gradebook.addassignment("Exam", 100);
+     
+};
 
-     string reportanalysis = gradebook.report();
+TEST_CASE("Does not crash when there is no data to be shown") {
+     Gradebook gradebook;
+     REQUIRE_NOTHROW(gradebook.report());
+};
 
-}
