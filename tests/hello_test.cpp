@@ -9,24 +9,32 @@
 
 TEST_CASE("Works good with three students in a class") {
 
-     Gradebook gradebook;
-     gradebook.addstudent("Bob"," ""Bobberson","ABC123");
-     gradebook.addstudent("Sam","Sammerson","DEF456");
-     gradebook.addstudent("Jess","Jesserson","HIJ789");
+    Gradebook gradebook;
+    gradebook.addstudent("Bob"," ""Bobberson","ABC123");
+    gradebook.addstudent("Sam","Sammerson","DEF456");
+    gradebook.addstudent("Jess","Jesserson","HIJ789");
 
 
 };
 
 TEST_CASE("Works good with two students and a single assignment") {
-     Gradebook gradebook;
-     gradebook.addstudent("Bob"," ""Bobberson","ABC123");
-     gradebook.addstudent("Sam","Sammerson","DEF456");
-     gradebook.addassignment("Exam", 100);
-     
+    Gradebook gradebook;
+    gradebook.addstudent("Bob"," ""Bobberson","ABC123");
+    gradebook.addstudent("Sam","Sammerson","DEF456");
+    gradebook.addassignment("Exam", 100);
+
 };
 
 TEST_CASE("Does not crash when there is no data to be shown") {
-     Gradebook gradebook;
-     REQUIRE_NOTHROW(gradebook.report());
+    Gradebook gradebook;
+    REQUIRE_NOTHROW(gradebook.report());
 };
 
+
+
+TEST_CASE("Single student added, no assignment grade, one assignment") {
+    Gradebook gradebook;
+    gradebook.addstudent("Sam","Sammerson","DEF456");
+    gradebook.addassignment("Module Guide Quiz", 100);
+    REQUIRE_NOTHROW(gradebook.report());
+};
